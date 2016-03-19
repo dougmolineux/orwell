@@ -7,4 +7,13 @@ exec(cmd, function(error, stdout, stderr) {
 	console.log("stdout", stdout);
 	console.log("stderr", stderr);
 	console.log("Finished making " + filename);
+
+	fs.stat('foo.txt', function(err, stat) {
+    		if(err == null) {
+        		console.log(filename + ' Confirmed to exist');
+    		} else {
+        		console.log('Error: ', err);
+    		}
+	});
+
 });

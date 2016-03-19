@@ -1,6 +1,7 @@
 var exec = require('child_process').exec;
 var filename = new Date().getTime() + ".gif";
 var cmd = 'convert -delay 2 -loop 0 "video/*.jpg" ' + filename;
+var fs = require("fs");
 
 exec(cmd, function(error, stdout, stderr) {
 	console.log("error", error);

@@ -9,3 +9,5 @@ Create gif from captured images:
 `node createGif.js`
 
 Tested with DLink DCS-930LB1 HW: B2
+
+This uses https://github.com/mmaelzer/motion to detect motion.

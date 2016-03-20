@@ -10,4 +10,4 @@ Create gif from captured images:
 
 Tested with DLink DCS-930LB1 HW: B2
 
-This uses https://github.com/mmaelzer/motion to detect motion.
+This uses https://github.com/mmaelzer/motion to detect motion. Repo created for personal use only.

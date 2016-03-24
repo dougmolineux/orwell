@@ -7,13 +7,14 @@ var MotionStream = require("motion-detect").Stream;
 var FileOnWrite = require("file-on-write");
 var consumer = new MjpegConsumer();
 var motion = new MotionStream();
+var c = 0;
 
 var writer = new FileOnWrite({ 
   path: './video',
   ext: '.jpg',
   filename: function(image) {
     var fn = image.time;
-    console.log("Writing to file: " + fn);
+    console.log(++c + " Writing to file: " + fn);
     return fn;
   },
   transform: function(image) {

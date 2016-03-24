@@ -1,0 +1,1 @@
+/usr/local/bin/convert -verbose -delay 2 -loop 0 -monitor "video/*.jpg" $1

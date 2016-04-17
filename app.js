@@ -20,6 +20,10 @@ var argumentCheck = function(args) {
 
 argumentCheck(process.argv);
 
+var username = process.argv[2];
+var password = process.argv[3];
+var url = "http://"+process.argv[4]+"/mjpeg.cgi";
+
 var writer = new FileOnWrite({ 
   path: './video',
   ext: '.jpg',
@@ -33,10 +37,6 @@ var writer = new FileOnWrite({
   },
   sync: true
 });
-
-var username = process.argv[2];
-var password = process.argv[3];
-var url = "http://"+process.argv[4]+"/mjpeg.cgi";
 
 console.log("Attempting to connect to "+url+"...")
 

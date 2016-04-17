@@ -1,3 +1,5 @@
 node_modules
 video/*
+timestamped_video/*
 *.gif
+*.mp4

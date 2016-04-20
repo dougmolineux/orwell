@@ -1,6 +1,8 @@
 # orwell
 
-Records only when motion is detected. Images go into /video directory. Also, includes tool to convert images into Gif. Suggestion: use "forever" to make sure the node process stays alive.
+Records only when motion is detected. 
+
+Suggestion: use "forever" to make sure the node process stays alive.
 
 Example Usage:
 
@@ -14,6 +16,14 @@ Create mp4 from captured images (video2/):
 
 `bash createMp4.sh`
 
+# Features
+- Timestamped image captures
+- Only captured images when motion detected
+- Tools to create gif or mp4
+
+# Screenshots
+![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")
+
 # Install
 `npm install`
 
@@ -24,14 +34,6 @@ http://www.imagemagick.org/
 For createMp4.sh ffmpeg is required:
 
 https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
-
-# Features
-- Timestamped image captures
-- Only captured images when motion detected
-- Tools to create gif or mp4
-
-# Screenshots
-![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")
 
 # Additional Notes
 Under the covers, this project uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2. However, any IP Cam that provides a "/mjpeg.cgi" stream should be supported.

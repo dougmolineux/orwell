@@ -1,52 +1,21 @@
-var fs = require('fs');
-var files = fs.readdirSync("video");
-var path = require('path');
-var spawn = require('child_process').spawn;
-var exec = require('child_process').exec;
-var epochs = [];
+'use strict';
+
+const exec = require('child_process').exec;
+const fs = require('fs');
+const files = fs.readdirSync("video");
+const path = require('path');
 
 for(var i in files) {
    if(path.extname(files[i]) === ".jpg") {
-       // console.log(files[i].split(".")[0]);
-       console.log(files[i]);
-       //epochs.push(files[i].split(".")[0]);
-       epochs.push(files[i]);
+       	console.log(files[i]);
+       	console.log(files[i].split(".")[0]);
+       	let timestamp = parseInt(files[i].split(".")[0]);
+       	let dateString = new Date(timestamp).toString().split(' ').join('');
+       	let command = 'bash ./annotateImage.sh '+files[i]+' \''+dateString+'\'';
+       	console.log("command ", command)
+		exec(command, (error, stdout, stderr) => {
+			console.log(stdout);
+		});
    }
 }
 
-function run() { 
-
-	var tmpEpochs = [];
-	tmpEpochs.push(epochs[0]);
-
-	tmpEpochs.forEach( function(t) {
-
-		var cmd = spawn('bash annotateImage.sh', [ t, new Date().toString() ]);
-
-		cmd.stdout.on('data', function (data) {
-			console.log(data.toString());
-		});
-
-		cmd.stderr.on('data', function (data) {
-			console.log(data.toString());
-		});
-
-		cmd.on('exit', function (code) {
-			console.log("Finished running command.");
-			console.log('Child process exited with code ' + code);
-			fs.stat(filename, function(err, stat) {
-				if(err == null) {
-					console.log(filename + ' Confirmed to exist');
-					// exec("rm -rf video/*.jpg", (err, stdout, stderr) => {
-					// 	console.log("Removed jpgs")
-					// });
-				} else {
-					console.log(filename + ' Does Not seem to exist!');
-				}
-			});
-		});
-	});
-
-}
-
-run();

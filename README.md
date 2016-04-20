@@ -12,7 +12,7 @@ Create gif from captured images:
 
 `node createGif.js`
 
-Create mp4 from captured images (video2/):
+Create mp4 from captured images:
 
 `bash createMp4.sh`
 

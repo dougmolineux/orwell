@@ -7,8 +7,6 @@ const path = require('path');
 
 for(var i in files) {
    if(path.extname(files[i]) === ".jpg") {
-       	console.log(files[i]);
-       	console.log(files[i].split(".")[0]);
        	let timestamp = parseInt(files[i].split(".")[0]);
        	let dateString = new Date(timestamp).toString().split(' ').join('');
        	let command = 'bash ./annotateImage.sh '+files[i]+' \''+dateString+'\'';

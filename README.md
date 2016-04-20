@@ -28,4 +28,4 @@ https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
 This uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2
 
 # Screenshots
-![Alt text](/screenshots/img.jpg?raw=true "Optional Title")
+![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")

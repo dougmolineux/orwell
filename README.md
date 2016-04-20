@@ -25,8 +25,6 @@ For createMp4.sh ffmpeg is required:
 
 https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
 
-This uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2
-
 # Features
 - Timestamped image captures
 - Only captured images when motion detected
@@ -34,3 +32,6 @@ This uses https://github.com/mmaelzer/motion to detect motion. Repository create
 
 # Screenshots
 ![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")
+
+# Additional Notes
+Under the covers, this project uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2. However, any IP Cam that provides a "/mjpeg.cgi" stream should be supported.

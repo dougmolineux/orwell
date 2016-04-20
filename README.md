@@ -10,6 +10,10 @@ Create gif from captured images:
 
 `node createGif.js`
 
+Create mp4 from captured images (video2/):
+
+`node createMp4.js`
+
 # Install
 `npm install`
 
@@ -17,4 +21,8 @@ For createGif.js ImageMagick CLI Tools are required:
 
 http://www.imagemagick.org/
 
-This uses https://github.com/mmaelzer/motion to detect motion. Repo created for personal use only. Tested with DLink DCS-930LB1 HW: B2
+For createMp4.js ffmpeg is required:
+
+https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
+
+This uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2

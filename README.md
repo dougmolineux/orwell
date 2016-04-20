@@ -1,6 +1,6 @@
 # orwell
 
-Records only when motion is detected. Images go into /video directory. Also, includes tool to convert images into Gif.
+Records only when motion is detected. Images go into /video directory. Also, includes tool to convert images into Gif. Suggestion: use "forever" to make sure the node process stays alive.
 
 Example Usage:
 
@@ -12,17 +12,20 @@ Create gif from captured images:
 
 Create mp4 from captured images (video2/):
 
-`node createMp4.js`
+`bash createMp4.sh`
 
 # Install
 `npm install`
 
-For createGif.js ImageMagick CLI Tools are required:
+For createGif.js ImageMagick CLI Tools are required (Note: gifs don't work well, when video is long in duration):
 
 http://www.imagemagick.org/
 
-For createMp4.js ffmpeg is required:
+For createMp4.sh ffmpeg is required:
 
 https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
 
 This uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2
+
+# Screenshots
+![Alt text](/screenshots/img.jpg?raw=true "Optional Title")

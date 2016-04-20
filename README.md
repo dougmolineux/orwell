@@ -1,4 +1,4 @@
-# ipcamrecorder
+# orwell
 
 Records only when motion is detected. Images go into /video directory. Also, includes tool to convert images into Gif.
 

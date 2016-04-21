@@ -4,9 +4,11 @@ Records only when motion is detected.
 
 Suggestion: use "forever" to make sure the node process stays alive.
 
-Example Usage:
+Run recorder:
 
 `node app.js admin myPassword 10.0.0.159`
+
+Process captured images:
 
 ```
 # create gif from captured images:

@@ -8,13 +8,13 @@ Example Usage:
 
 `node app.js admin myPassword 10.0.0.159`
 
-Create gif from captured images:
+```
+# create gif from captured images:
+node createGif.js`
 
-`node createGif.js`
-
-Create mp4 from captured images:
-
-`bash createMp4.sh`
+# create mp4 from captured images:
+node makeMp4.js
+```
 
 # Features
 - Timestamped image captures

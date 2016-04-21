@@ -10,10 +10,9 @@ for(var i in files) {
        	let timestamp = parseInt(files[i].split(".")[0]);
        	let dateString = new Date(timestamp).toString().split(' ').join('');
        	let command = 'bash ./annotateImage.sh '+files[i]+' \''+dateString+'\'';
-       	console.log("command ", command)
-		exec(command, (error, stdout, stderr) => {
-			console.log(stdout);
-		});
+       	console.log("command ", command);
+    		exec(command, (error, stdout, stderr) => {
+    			console.log(stdout);
+    		});
    }
 }
-

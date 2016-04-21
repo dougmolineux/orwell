@@ -1,5 +1,6 @@
 node_modules
-video/*
-timestamped_video/*
+video
+timestamped_video
+vid2
 *.gif
 *.mp4

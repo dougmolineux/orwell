@@ -2,7 +2,7 @@
 
 const exec = require('child_process').exec;
 const fs = require('fs');
-const files = fs.readdirSync("video");
+const files = fs.readdirSync("tmp");
 const path = require('path');
 
 for(var i in files) {

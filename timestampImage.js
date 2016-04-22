@@ -13,6 +13,8 @@ for(var i in files) {
        	console.log("command ", command);
     		exec(command, (error, stdout, stderr) => {
     			console.log(stdout);
+			console.log(stderr);
+			console.log(error);
     		});
    }
 }

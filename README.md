@@ -12,7 +12,7 @@ Process captured images:
 node makeMp4.js
 
 # create gif from captured images:
-node createGif.js`
+node makeGif.js`
 ```
 
 # Features

@@ -1,15 +1,15 @@
-// Example Usage:
-// node app.js admin myPassword 10.0.0.159
-var request = require("request");
-var MjpegConsumer = require("mjpeg-consumer");
-var MotionStream = require("motion-detect").Stream;
-var FileOnWrite = require("file-on-write");
-var consumer = new MjpegConsumer();
-var motion = new MotionStream();
-var colors = require('colors');
-var c = 0;
+'use strict';
 
-var argumentCheck = function(args) {
+const request = require("request");
+const MjpegConsumer = require("mjpeg-consumer");
+const MotionStream = require("motion-detect").Stream;
+const FileOnWrite = require("file-on-write");
+const consumer = new MjpegConsumer();
+const motion = new MotionStream();
+const colors = require('colors');
+let c = 0;
+
+const argumentCheck = function(args) {
   if(args.length < 5) {
     console.log("Username, Password and IP Address required.".red);
     console.log("Example Usage:".blue);
@@ -20,31 +20,38 @@ var argumentCheck = function(args) {
 
 argumentCheck(process.argv);
 
-var username = process.argv[2];
-var password = process.argv[3];
-var url = "http://"+process.argv[4]+"/mjpeg.cgi";
+const username = process.argv[2];
+const password = process.argv[3];
+const url = "http://"+process.argv[4]+"/mjpeg.cgi";
 
-var writer = new FileOnWrite({ 
+const writer = new FileOnWrite({
   path: './video',
   ext: '.jpg',
-  filename: function(image) {
+  filename: (image) => {
     var fn = image.time;
     console.log(++c + " Writing to file: " + fn);
     return fn;
   },
-  transform: function(image) {
+  transform: (image) => {
     return image.data;
   },
   sync: true
 });
 
-console.log("Attempting to connect to "+url+"...")
-
-var options = {
+const options = {
   url: url,
   headers: {
     'Authorization': 'Basic ' + new Buffer(username + ':' + password).toString('base64')
-  }  
+  },
+  forever: true
 };
 
-request(options).pipe(consumer).pipe(motion).pipe(writer);
+const errorHandler = (err) => {
+  console.log("There was a failure connecting to".red, url.red);
+  console.log("Make sure your parameters are correct".red);
+  console.log(err);
+  process.exit();
+};
+
+console.log("Attempting to connect to ".green+url.blue+"...".green);
+request(options).on('error', errorHandler).pipe(consumer).pipe(motion).pipe(writer);

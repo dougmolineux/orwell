@@ -53,5 +53,15 @@ const errorHandler = (err) => {
   process.exit();
 };
 
-console.log("Attempting to connect to ".green+url.blue+"...".green);
-request(options).on('error', errorHandler).pipe(consumer).pipe(motion).pipe(writer);
+const successHandler = (err) => {
+  console.log("Connection Appears Successful. Proceeding to watch for motion...".green);
+};
+
+console.log("orwell v0.0.3".blue);
+console.log("Attempting to connect to ".blue+url.blue+"...".blue);
+request(options)
+  .on('error', errorHandler)
+  .on('response', successHandler)
+  .pipe(consumer)
+  .pipe(motion)
+  .pipe(writer);

@@ -9,6 +9,8 @@ const motion = new MotionStream();
 const colors = require('colors');
 let c = 0;
 
+console.log("orwell v0.0.3".blue);
+
 const argumentCheck = function(args) {
   if(args.length < 5) {
     console.log("Username, Password and IP Address required.".red);
@@ -57,11 +59,25 @@ const successHandler = (err) => {
   console.log("Connection Appears Successful. Proceeding to watch for motion...".green);
 };
 
-console.log("orwell v0.0.3".blue);
-console.log("Attempting to connect to ".blue+url.blue+"...".blue);
-request(options)
-  .on('error', errorHandler)
-  .on('response', successHandler)
-  .pipe(consumer)
-  .pipe(motion)
-  .pipe(writer);
+const endHandler = (err) => {
+  console.log("Connection Ended".red);
+  initiateConnection();
+};
+
+const closeHandler = (err) => {
+  console.log("Connection Closed".red);
+};
+
+const initiateConnection = () => {
+  console.log("Attempting to connect to ".blue+url.blue+"...".blue);
+  request(options)
+    .on('error', errorHandler)
+    .on('response', successHandler)
+    .on('end', endHandler)
+    .on('close', closeHandler)
+    .pipe(consumer)
+    .pipe(motion)
+    .pipe(writer);
+};
+
+initiateConnection();

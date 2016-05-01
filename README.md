@@ -40,3 +40,4 @@ Under the covers, this project uses https://github.com/mmaelzer/motion to detect
 # TODO
 - Add a status node script that gives us the number of files, and possibly the length of the resulting MP4. The number of MP4s, size and length.
 - Writing to file print time and date information, as well as Connection Ended time
+- Count the number of files in video/ and in timestamped_video

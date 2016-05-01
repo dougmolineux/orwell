@@ -69,6 +69,7 @@ const closeHandler = (err) => {
 };
 
 const initiateConnection = () => {
+  console.log(new Date());
   console.log("Attempting to connect to ".blue+url.blue+"...".blue);
   request(options)
     .on('error', errorHandler)

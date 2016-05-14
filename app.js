@@ -9,7 +9,7 @@ const motion = new MotionStream();
 const colors = require('colors');
 let c = 0;
 
-console.log("orwell v0.0.3".blue);
+console.log("orwell v0.0.4".blue);
 
 const argumentCheck = function(args) {
   if(args.length < 5) {
@@ -61,11 +61,12 @@ const successHandler = (err) => {
 
 const endHandler = (err) => {
   console.log("Connection Ended".red);
-  initiateConnection();
+  process.exit();
 };
 
 const closeHandler = (err) => {
   console.log("Connection Closed".red);
+  process.exit();
 };
 
 const initiateConnection = () => {
@@ -82,3 +83,8 @@ const initiateConnection = () => {
 };
 
 initiateConnection();
+
+// quit after 2 hours
+setTimeout( () => {
+  process.exit();
+}, 7200000);

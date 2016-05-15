@@ -86,5 +86,7 @@ initiateConnection();
 
 // quit after 2 hours
 setTimeout( () => {
+  console.log(new Date());
+  console.log("Quitting...");
   process.exit();
-}, 7200000);
+}, 3600000);

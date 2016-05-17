@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require("fs");
 const checker = require("./timestampChecker").checkFolders;
 const spawn = require('child_process').spawn;
@@ -33,9 +35,9 @@ run();
 
 let checkResults = () => {
 	console.log("The following number: ");
-	checker("video");
+	checker(__dirname+"/video");
 	console.log("Should equal");
-	checker("timestamped_video");
+	checker(__dirname+"/timestamped_video");
 	// we need to executre these two commands
 	// node timestampChecker.js video
 	// node timestampChecker.js timestamped_video

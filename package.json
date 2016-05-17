@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.1.2",
+    "exec-queue": "0.0.2",
     "file-on-write": "^1.1.1",
     "fs": "0.0.2",
     "mjpeg-consumer": "^1.1.0",

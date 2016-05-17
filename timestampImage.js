@@ -1,6 +1,7 @@
 'use strict';
 
-const exec = require('child_process').exec;
+const exec = require('exec-queue');
+//const exec = require('child_process').exec;
 const fs = require('fs');
 const files = fs.readdirSync("tmp");
 const path = require('path');

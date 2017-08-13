@@ -37,6 +37,8 @@ http://www.imagemagick.org/
 # Additional Notes
 Under the covers, this project uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2. However, any IP Cam that provides a "/mjpeg.cgi" stream should be supported.
 
+About 20,000 images creates a video file that is around 13 minutes.
+
 # TODO
 - Add a status node script that gives us the number of files, and possibly the length of the resulting MP4. The number of MP4s, size and length.
 - Writing to file print time and date information, as well as Connection Ended time

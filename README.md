@@ -4,7 +4,7 @@ Records only when motion is detected. Use "forever" to make sure the node proces
 
 Run recorder:
 
-`node app.js admin myPassword 10.0.0.159`
+`node app.js admin myPassword 10.0.0.170`
 
 Process captured images:
 ```

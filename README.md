@@ -40,6 +40,7 @@ Under the covers, this project uses https://github.com/mmaelzer/motion to detect
 About 20,000 images creates a video file that is around 13 minutes.
 
 # TODO
+- Make a directory called "timestamped_video" on initial setup of the makeMp4.js file, we need to be careful not to delete it, if it already exists
 - Add a status node script that gives us the number of files, and possibly the length of the resulting MP4. The number of MP4s, size and length.
 - Writing to file print time and date information, as well as Connection Ended time
-- Count the number of files in video/ and in timestamped_video
+- Add instructions for Raspian (libav-tools) and creating an alias for avconv

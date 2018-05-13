@@ -1,0 +1,8 @@
+<img id='pic' src='video/Leicester-86748.jpg'><script>
+    var files = ['video/Leicester-86748.jpg','video/leicester-city-centre.jpg'];
+    var c = 0;
+    setInterval(function(){
+      document.getElementById("pic").src=files[c++];
+      if(c == files.length) c = 0;
+    }, 100);
+  </script>

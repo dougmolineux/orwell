@@ -2,6 +2,26 @@
 
 Records only when motion is detected. Use "forever" to make sure the node process stays alive.
 
+# Install
+Testing using node v10.24.1 (npm v6.14.12) and node v9.11.2 (npm v5.6.0) 
+`npm install`
+
+then for macs:
+
+`brew install imagemagick`
+
+For windows, visit the imagemagick website for installation instructions:
+
+http://www.imagemagick.org/
+
+For creating mp4s. ffmpeg is required:
+
+https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
+
+For creating gifs, ImageMagick CLI Tools are required (Note: gifs don't work well, when video is long in duration).
+
+# Running
+
 Run recorder, provide username, password then ip address of the IP Cam:
 
 `node app.js admin myPassword 10.0.0.170`
@@ -22,18 +42,6 @@ node makeGif.js`
 
 # Screenshots
 ![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")
-
-# Install
-Testing using node v10.24.1 (npm v6.14.12) and node v9.11.2 (npm v5.6.0)
-`npm install`
-
-For creating mp4s ffmpeg is required:
-
-https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
-
-For creating gifs ImageMagick CLI Tools are required (Note: gifs don't work well, when video is long in duration):
-
-http://www.imagemagick.org/
 
 # Additional Notes
 Under the covers, this project uses https://github.com/mmaelzer/motion to detect motion. Repository created for personal use only. Tested with DLink DCS-930LB1 HW: B2. However, any IP Cam that provides a "/mjpeg.cgi" stream should be supported.

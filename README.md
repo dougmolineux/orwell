@@ -24,7 +24,7 @@ node makeGif.js`
 ![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")
 
 # Install
-Testing using node v10.24.1 (npm v6.14.12)
+Testing using node v10.24.1 (npm v6.14.12) and node v9.11.2 (npm v5.6.0)
 `npm install`
 
 For creating mp4s ffmpeg is required:

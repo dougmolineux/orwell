@@ -1,5 +1,6 @@
 #!/bin/bash
 which ffmpeg
+cp -R video video_backup
 mv video/ tmp/
 mkdir video
 node timestampImage.js

@@ -2,7 +2,7 @@
 
 Records only when motion is detected. Use "forever" to make sure the node process stays alive.
 
-Run recorder:
+Run recorder, provide username, password then ip address of the IP Cam:
 
 `node app.js admin myPassword 10.0.0.170`
 
@@ -24,6 +24,7 @@ node makeGif.js`
 ![Alt text](/screenshots/1460930627074.jpg?raw=true "Screenshot 1")
 
 # Install
+Testing using node v10.24.1 (npm v6.14.12)
 `npm install`
 
 For creating mp4s ffmpeg is required:
@@ -58,3 +59,4 @@ You will see an output of IP addresses, try going to them in a browser, and seei
 - Add a status node script that gives us the number of files, and possibly the length of the resulting MP4. The number of MP4s, size and length.
 - Writing to file print time and date information, as well as Connection Ended time
 - Add instructions for Raspian (libav-tools) and creating an alias for avconv
+- Fix so that it works with latest node (currently there is an error using node v15 and running `npm install`)

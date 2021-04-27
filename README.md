@@ -59,4 +59,16 @@ You will see an output of IP addresses, try going to them in a browser, and seei
 - Add a status node script that gives us the number of files, and possibly the length of the resulting MP4. The number of MP4s, size and length.
 - Writing to file print time and date information, as well as Connection Ended time
 - Add instructions for Raspian (libav-tools) and creating an alias for avconv
-- Fix so that it works with latest node (currently there is an error using node v15 and running `npm install`)
+- Fix so that it works with latest node (currently there is an error using node v15 and running `npm install`)'
+
+# Debugging
+If you see this error:
+```
+Connection Appears Successful. Proceeding to watch for motion...
+events.js:165
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: spawn convert ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:201:19)
+```

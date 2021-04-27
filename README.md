@@ -13,7 +13,9 @@ npm install
 
 then for macs using brew:
 
-`brew install imagemagick`
+```
+brew install imagemagick
+```
 
 For Windows, visit the imagemagick website for installation instructions:
 
@@ -22,8 +24,6 @@ http://www.imagemagick.org/
 For creating mp4s. ffmpeg is required:
 
 https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
-
-(Note: gifs don't work well, when video is long in duration).
 
 # How to Run
 
@@ -39,6 +39,7 @@ node makeMp4.js
 # create gif from captured images:
 node makeGif.js
 ```
+(Note: gifs don't work well, when video is long in duration).
 
 # Features
 - Timestamped image captures

@@ -85,3 +85,4 @@ events.js:165
 Error: spawn convert ENOENT
     at Process.ChildProcess._handle.onexit (internal/child_process.js:201:19)
 ```
+You are missing imagemagick, please see the Install section of this README

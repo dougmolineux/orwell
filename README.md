@@ -2,7 +2,7 @@
 
 Records only when motion is detected. Use "forever" to make sure the node process stays alive.
 
-# Install
+# How to Install
 Testing using node v10.24.1 (npm v6.14.12) and node v9.11.2 (npm v5.6.0).
 
 Install NPM dependencies:
@@ -25,7 +25,7 @@ https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg
 
 (Note: gifs don't work well, when video is long in duration).
 
-# Running
+# How to Run
 
 Run recorder, provide username, password then ip address of the IP Cam:
 
@@ -53,9 +53,9 @@ Under the covers, this project uses https://github.com/mmaelzer/motion to detect
 
 About 20,000 images creates a video file that is around 13 minutes.
 
-# How to get IP address of your camera
+# How to Get IP address of Your Webcam
 
-This can be tricky, since I have only tested this using a dlink camera, I'll only be able to explain that here. Please open a Pull Request (modifying this file) if you have any insight into additional cameras
+This can be tricky, since I have only tested this using a dlink camera, I'll only be able to explain that here. Please open a Pull Request (modifying this file) if you have any insight into additional cameras.
 
 mydlink.com allows you to modify the settings of your camera, when you view "My Devices" you may be able to find a link which will tell you the IP address of your camera.
 
@@ -66,6 +66,10 @@ Try using nmap (`brew install nmap` on a mac) then running:
 nmap -p80 10.0.0.0/24 -oG - | grep 80/open
 ```
 You will see an output of IP addresses, try going to them in a browser, and seeing you get any text. Red text means you found the Dlink cam, you can also try appending mjpeg.cgi, so it would look like this `http://10.0.0.168/mjpeg.cgi`
+
+# File Overview
+- `utils` - this folder includes some linux scripts that can facilitate managing a large number of captured images
+- `utils/count.sh` - counts the number of files inside a particular folder
 
 # TODO
 - Make a directory called "timestamped_video" on initial setup of the makeMp4.js file, we need to be careful not to delete it, if it already exists

@@ -34,10 +34,11 @@ Run recorder, provide username, password then ip address of the IP Cam:
 Process captured images:
 ```
 # create mp4 from captured images:
+(timestamps are required, todo: add how to timestamp all images)
 node makeMp4.js
 
 # create gif from captured images:
-node makeGif.js`
+node makeGif.js
 ```
 
 # Features

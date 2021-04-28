@@ -91,3 +91,5 @@ Error: spawn convert ENOENT
     at Process.ChildProcess._handle.onexit (internal/child_process.js:201:19)
 ```
 You are missing imagemagick, please see the Install section of this README
+
+If you just see `Connection Ended` in red, then it could mean your username or password are not correct.
